@@ -5,3 +5,9 @@
     -o-object-fit: contain;
        object-fit: contain;
 }
+
+@media screen and (max-width: 768px) {
+    .logo{
+        width: 40%;
+    }
+}

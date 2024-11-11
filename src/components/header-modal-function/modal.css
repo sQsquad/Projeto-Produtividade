@@ -9,7 +9,7 @@
 
  .modal-overlay .modal-content {
   position: relative;
-  background-color: var(--light-blue);
+  background-color: var(--fundo-modal);
   border-radius: 0.25rem;
   width: 340px;
   height: 240px;

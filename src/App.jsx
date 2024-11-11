@@ -7,7 +7,6 @@ import NaoEncontrado from "./pages/NaoEncontrado";
 
 export default function App() {
   return (
-
     <Routes>
       <Route path='/' element={<HomePage />}/> 
       <Route path='cadastro' element={<Cadastro />}/>

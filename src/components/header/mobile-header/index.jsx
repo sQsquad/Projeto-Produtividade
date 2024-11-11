@@ -2,6 +2,7 @@ import './mobile-header.css'
 import Logo from '../logo'
 import User from '../../User'
 import Icons from '../icons-modal'
+import BotaoTema from '../../BotaoTema'
 
 
 export default function MobileHeader () {
@@ -11,6 +12,7 @@ export default function MobileHeader () {
 
             <header className='mobile_header'>
                 <Logo/>
+                <BotaoTema />
                 <User/>
             </header>
 

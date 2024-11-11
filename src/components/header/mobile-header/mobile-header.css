@@ -8,10 +8,12 @@
   }
   
   .mobile_header_absolute {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 3.7rem;
     background-color: var(--bg-color-dark);
+    z-index: 9;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   

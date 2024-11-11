@@ -2,6 +2,7 @@ import './desktop-header.css'
 import Logo from '../logo'
 import Icons from '../icons-modal'
 import User from '../../User'
+import BotaoTema from '../../BotaoTema'
 
 
 export default function DesktopHeader () {
@@ -13,6 +14,7 @@ export default function DesktopHeader () {
 
             <div className='desktop_header_divEnd'>
                 <Icons/>
+                <BotaoTema />
                 <User/>
             </div>
         </header>

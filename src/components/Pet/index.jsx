@@ -1,4 +1,4 @@
-import PetImage from '/public/imagens-svg/aside-imagem.svg';
+import PetImage from '/imagens-svg/aside-imagem.svg';
 import Botao from '../Botao';
 import './pet.css'
 

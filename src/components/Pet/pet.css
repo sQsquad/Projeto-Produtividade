@@ -3,10 +3,12 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    height: auto;
+    gap: 2rem;
 }
 
 .pet_container img {
-    max-width: 100%;
-    height: 85%;
+    max-width: 70%;
+    height: 80%;
 }
+
+

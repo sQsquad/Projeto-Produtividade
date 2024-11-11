@@ -45,10 +45,3 @@
     left: 0;
     top: 0;
 }
-
-@media (min-width: 725px) {
-    .user_container {
-        width: 4.7rem;
-        height: 4.7rem;
-    }
-}

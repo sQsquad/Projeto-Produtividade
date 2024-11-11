@@ -6,7 +6,7 @@
 }
 .modal-overlay .modal-content {
   position: relative;
-  background-color: var(--light-blue-bg);
+  background-color: var(--fundo-modal);
   padding: 1.25rem;
   border-radius: 0.25rem;
   max-width: 500px;
