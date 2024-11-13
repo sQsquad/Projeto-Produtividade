@@ -34,8 +34,8 @@ const BotaoPadrao = styled.button`
 
 `
 
-export default function Botao({children}) {
+export default function Botao({onClick ,children}) {
     return (
-        <BotaoPadrao>{children}</BotaoPadrao>
+        <BotaoPadrao onClick={onClick}>{children}</BotaoPadrao>
     )
 }
