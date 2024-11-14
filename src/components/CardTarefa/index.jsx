@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Botao from "../Botao";
 import Tarefa from "../Tarefa";
 import ToLink from "../ToLink";
+import { getTarefas } from "../Services/api";
 //import './cardTarefa.css';
 
 const CardContainer = styled.div`
@@ -77,6 +78,19 @@ const CardButton = styled.div`
     }
 `
 
+function carregarTarefas () {
+    const carregarTarefa = { nome: "abubaba" };
+    getTarefas(carregarTarefa)
+        .then(resposta => {
+            console.log("Sucesso", resposta.data);
+            
+        })
+        .catch(erro => {
+            console.log("erro ao criar a tarefa:", erro);
+            
+        });
+}
+
 export default function CardTarefa() {
     return (
         <CardContainer>
@@ -87,6 +101,7 @@ export default function CardTarefa() {
                     <Tarefa textLabel={"Caminhada"} name={"tarefa_2"} tag={"exercício"} tempo={"00:30"} cor={'--destaque'}/>
                     <Tarefa textLabel={"Leitura"} name={"tarefa_3"} tag={"leitura"} tempo={"00:20"} cor={'--roxo-destaque'}/>
                     <Tarefa textLabel={"Limpeza"} name={"tarefa_4"} tag={"casa"} tempo={"00:20"} cor={'--tag-clara'}/>
+                    
                 </ContentTasks>
                 <Historico>
                     <ToLink>historico de tarefas</ToLink>

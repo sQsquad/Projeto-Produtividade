@@ -9,7 +9,12 @@ export const getCategorias = () => api.get('/categoria');
 export const createCategorias = (data) => api.post('/categoria', data);
 
 //tarefas
-export const  getTarefas = () => api.get(`/tarefa/${idUser}`);
+export const  getTarefas = (idUser) => api.get(`/tarefa/${idUser}`, {
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+
 export const createTarefas = (data) => api.post('/tarefa', data, {
     headers: {
         'Content-Type': 'application/json'
