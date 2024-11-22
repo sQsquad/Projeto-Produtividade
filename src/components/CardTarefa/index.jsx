@@ -2,7 +2,9 @@ import styled from "styled-components";
 import Botao from "../Botao";
 import Tarefa from "../Tarefa";
 import ToLink from "../ToLink";
-import { getTarefas } from "../Services/api";
+import { useEffect } from "react";
+import axios from "axios";
+
 //import './cardTarefa.css';
 
 const CardContainer = styled.div`
@@ -78,26 +80,28 @@ const CardButton = styled.div`
     }
 `
 
-function carregarTarefas () {
-    const carregarTarefa = { nome: "abubaba" };
-    getTarefas(carregarTarefa)
-        .then(resposta => {
-            console.log("Sucesso", resposta.data);
-            
-        })
-        .catch(erro => {
-            console.log("erro ao criar a tarefa:", erro);
-            
-        });
-}
 
 export default function CardTarefa() {
+
+    useEffect((idUser) => {
+        axios.get(`http://localhost:5175/api/tarefa${idUser}`)
+            .then(resposta => {
+                console.log(resposta);
+                
+            })
+            .catch(erro => {
+                console.log(erro);
+                
+            })
+    }, [])
+
     return (
         <CardContainer>
             <CardContent>
             <TituloCard>Tarefas de hoje</TituloCard>
                 <ContentTasks>
-                <Tarefa textLabel={"Curso JS"} name={"tarefa_1"} tag={"programação"} tempo={"01:00"} cor={'--details'}/>
+                    
+                    <Tarefa textLabel={"Curso JS"} name={"tarefa_1"} tag={"programação"} tempo={"01:00"} cor={'--details'}/>
                     <Tarefa textLabel={"Caminhada"} name={"tarefa_2"} tag={"exercício"} tempo={"00:30"} cor={'--destaque'}/>
                     <Tarefa textLabel={"Leitura"} name={"tarefa_3"} tag={"leitura"} tempo={"00:20"} cor={'--roxo-destaque'}/>
                     <Tarefa textLabel={"Limpeza"} name={"tarefa_4"} tag={"casa"} tempo={"00:20"} cor={'--tag-clara'}/>
