@@ -4,6 +4,7 @@ import User from '../../User'
 import Icons from '../icons-modal'
 import BotaoTema from '../../BotaoTema'
 
+//AJUSTAR EM 1 ARQUIVO APÓS CRIAÇÃO DO LOGIN.
 
 export default function MobileHeader () {
 

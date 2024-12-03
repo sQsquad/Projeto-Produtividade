@@ -4,6 +4,8 @@ import Icons from '../icons-modal'
 import User from '../../User'
 import BotaoTema from '../../BotaoTema'
 
+//AJUSTAR EM 1 ARQUIVO APÓS CRIAÇÃO DO LOGIN.
+
 export default function DesktopHeader () {
     return (
         <DesktopHeaderContainer>

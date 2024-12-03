@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Botao from "../Botao";
 import Tarefa from "../Tarefa";
 import ToLink from "../ToLink";
-import { getTarefas } from "../Services/api";
+import { getTarefas } from "../../Services/api";
 //import './cardTarefa.css';
 
 const CardContainer = styled.div`
