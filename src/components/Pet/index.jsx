@@ -1,7 +1,7 @@
 import PetImage from '/imagens-svg/aside-imagem.svg';
 import Botao from '../Botao';
-import './pet.css'
-import { createTarefas } from '../Services/api';
+import styled from 'styled-components';
+import { createTarefas } from '../../Services/api';
 
 
 function criarTarefa () {
@@ -19,9 +19,24 @@ function criarTarefa () {
 export default function Pet () {
 
     return (
-        <div className='pet_container'>
+        <PetContainer>
+
             <img src={PetImage}/>
             <Botao onClick={criarTarefa}>Criar Tarefa</Botao>
-        </div>
+        
+        </PetContainer>
     )
 }
+
+const PetContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+
+    img {
+        max-width: 70%;
+        height: 80%;
+    }
+`
