@@ -1,5 +1,6 @@
 import React from 'react';
 import './modal.css';
+import ModalSequencia from '../Modais/ModalSequencia';
 
 export default function Modal({ iconName, closeModal }) {
     const getContent = () => {
@@ -7,7 +8,7 @@ export default function Modal({ iconName, closeModal }) {
             case 'task':
                 return <p>Conteúdo do modal de tarefas</p>;
             case 'sequence':
-                return <p>Conteúdo do modal de sequência</p>;
+                return <ModalSequencia />;
             case 'pet':
                 return <p>Conteúdo do modal do pet</p>;
             case 'energy':
