@@ -38,10 +38,6 @@ strong {
     background-color: var(--fundo-modal-dias);
 }
 
-.week_days .selected {
-    background-color: var(--destaque);
-}
-
 .week_days {
     width: 41px;
     height: 41px;
@@ -52,6 +48,10 @@ strong {
     color: var(--texto-claro);
     background-color: var(--fundo-modal);
     border-radius: 5px;
+}
+
+.week_days.selected {
+    background-color: var(--destaque);
 }
 
 .modal_section {
